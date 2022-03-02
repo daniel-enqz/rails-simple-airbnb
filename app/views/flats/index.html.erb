@@ -1,5 +1,31 @@
-<h1>WORKS</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Simple AirBnB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <button class="btn btn-primary me-3" type="submit">Add a flat</button>
+    </div>
+  </div>
+</nav>
 
-<% @flats.each do |flat| %>
-<%= flat.name %>
-<% end %>
+<div class="d-flex justify-content-around mt-5 mb-5">
+  <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem;">
+      <img src="https://source.unsplash.com/random/<%=rand(495..500)%>x400" class="card-img-top" alt="flat">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.description %></p>
+        <div class="d-flex">
+          <i class="fa-solid fa-circle-dollar"></i><p class="card-text"><%= flat.price_per_night %></p>
+          <i class="fa-solid fa-user-group"></i><p class="card-text"><%= flat.number_of_guests %></p>
+        </div>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  <% end %>
+</div>
