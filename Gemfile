@@ -41,6 +41,11 @@ group :development do
   gem 'spring'
 end
 
+#BOOTSTRAP
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+
 # FAKER
 gem 'faker'
 
