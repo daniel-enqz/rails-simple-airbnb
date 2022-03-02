@@ -20,9 +20,11 @@
       <div class="card-body">
         <h5 class="card-title"><%= flat.name %></h5>
         <p class="card-text"><%= flat.description %></p>
-        <div class="d-flex">
-          <i class="fa-solid fa-circle-dollar"></i><p class="card-text"><%= flat.price_per_night %></p>
-          <i class="fa-solid fa-user-group"></i><p class="card-text"><%= flat.number_of_guests %></p>
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-user-group m-3"></i>
+          <p class="card-text mt-3"><%= flat.number_of_guests %></p>
+          <i class="fa-solid fa-money-bill-1 m-3"></i>
+          <p class="card-text"><%= flat.price_per_night %></p>
         </div>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
